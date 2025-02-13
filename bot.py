@@ -89,6 +89,7 @@ async def complete_signup(update: Update, context: ContextTypes.DEFAULT_TYPE):
         'full_name': update.effective_user.full_name
     }
 
+    print(user_db)
     await update.message.reply_text(
         f"✅ Registration Complete!\n"
         f"Phone: {user_data['phone']}\n"
@@ -97,14 +98,6 @@ async def complete_signup(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Clear temporary data
     context.user_data.clear()
-async def complete_signup(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Finalize registration"""
-    user_data = context.user_data
-    await update.message.reply_text(
-        f"✅ Registration Complete!\n"
-        f"Phone: {user_data['phone']}\n"
-        f"Password: {'*' * len(user_data['password'])}"
-    )
 
 
 async def show_profile(update: Update, context: ContextTypes.DEFAULT_TYPE):
