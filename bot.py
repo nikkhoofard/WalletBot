@@ -92,7 +92,7 @@ async def complete_signup(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         f"✅ Registration Complete!\n"
         f"Phone: {user_data['phone']}\n"
-        f"Password: {'*' * len(user_data['password']}"
+        f"Password: {'*' * len(user_data['password'])}"
     )
 
     # Clear temporary data
