@@ -11,6 +11,7 @@ from telegram.ext import (
 # Define states
 SIGNUP, PHONE, PASSWORD = range(3)
 
+user_information = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Send sign-up button on /start"""
