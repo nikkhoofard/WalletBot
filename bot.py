@@ -123,7 +123,7 @@ async def show_profile(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main() -> None:
-    application = Application.builder().token("YOUR_BOT_TOKEN").build()
+    application = Application.builder().token("7830109494:AAEVVc9ahVuuelyLsSoIJrxpc0eWRQON4FM").build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
